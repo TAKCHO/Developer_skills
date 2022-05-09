@@ -18,7 +18,7 @@ const temperatures = [3, -2, -6, -1, 'error', 9, 13, 17, 15, 14, 9, 5];
 // 3. find min value in temp array
 // 4. subtract min from max (amplitude) and return it
 
-const calcTempAmplitude = function (temps) {
+/* const calcTempAmplitude = function (temps) {
   let max = temps[0];
   let min = temps[0];
   for (let i = 0; i < temps.length; i++) {
@@ -32,13 +32,13 @@ const calcTempAmplitude = function (temps) {
 };
 
 const amplitude = calcTempAmplitude(temperatures);
-console.log(amplitude);
+console.log(amplitude); */
 
 // Function should now receive 2 arrays of temps
 // - with 2 arrays, should we implement functionality twice? NO! just merge two arrays
 // Merge 2 arrays --
 
-const calcTempAmplitudeNew = function (t1, t2) {
+/* const calcTempAmplitudeNew = function (t1, t2) {
   const temps = t1.concat(t2); // merge 2 arrays - concat
   console.log(temps);
 
@@ -55,4 +55,31 @@ const calcTempAmplitudeNew = function (t1, t2) {
 };
 
 const amplitudeNew = calcTempAmplitudeNew([3, 5, 1], [9, 0, 5]);
-console.log(amplitudeNew);
+console.log(amplitudeNew); */
+
+// Debugging
+
+const measureKelvin = function () {
+  const measurement = {
+    type: 'temp',
+    unit: 'celsius',
+
+    // c) FIX
+    // value: Number(prompt('Degrees celsiurs:')),
+    value: 10,
+  };
+
+  // B) Find
+  console.log(measurement);
+  console.table(measurement);
+
+  //   console.log(measurement.value);
+  //   console.warn(measurement.value);
+  //   console.error(measurement.value);
+
+  const kelvin = measurement.value + 273;
+  return kelvin;
+};
+
+// A) Identify the BUG
+console.log(measureKelvin());
